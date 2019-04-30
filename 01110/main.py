@@ -10,17 +10,18 @@ if __name__ == "__main__":
     cycle_count = 0
     result = -1
 
+    #N은 0보다 크거나 같고 99보다 작거나 같은 정수
     while 1:
-        n = int(sys.stdin.readline())
-        if n<0 or n>99:
+        N = int(sys.stdin.readline())
+        if N<0 or N>99:
             continue
         else:
             break
 
-    first_num = n//10 #몫만 반환
-    last_num = n%10
+    first_num = N//10 #몫만 반환
+    last_num = N%10
     
-    while n != result:
+    while N != result:
         result = (last_num*10)+((first_num+last_num)%10)
         first_num = result//10
         last_num = result%10
