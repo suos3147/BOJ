@@ -4,7 +4,7 @@ import sys
 import time 
 
 #시작 시간 체크
-start_time = time.time()
+#start_time = time.time()
 
 if __name__ == "__main__":
     cycle_count = 0
@@ -33,4 +33,4 @@ if __name__ == "__main__":
 
 
 #실행시간 출력
-print("--- %s seconds ---"%(time.time()-start_time))
+#print("--- %s seconds ---"%(time.time()-start_time))
