@@ -1,7 +1,7 @@
 # 문제 출처: https://www.acmicpc.net/problem/1110
 
 import sys
-import time 
+#import time 
 
 #시작 시간 체크
 #start_time = time.time()
