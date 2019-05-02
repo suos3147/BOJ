@@ -1,7 +1,7 @@
 # 문제 출처: https://www.acmicpc.net/problem/1110
 
 import sys
-import time
+import time 
 
 #시작 시간 체크
 start_time = time.time()
@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cycle_count = 0
     result = -1
 
-    #N은 0보다 크거나 같고 99보다 작거나 같은 정수
+    #입력: N은 0보다 크거나 같고 99보다 작거나 같은 정수
     while 1:
         N = int(sys.stdin.readline())
         if N<0 or N>99:
@@ -27,6 +27,7 @@ if __name__ == "__main__":
         last_num = result%10
         cycle_count += 1
 
+    #출력: 순환 횟수
     print(cycle_count)
 
 
