@@ -4,7 +4,6 @@ import sys
 
 if __name__ == "__main__":
     count = 0
-    place_value = []
 
     while 1:
         user_input = int(sys.stdin.readline())
@@ -15,9 +14,10 @@ if __name__ == "__main__":
         if i <= 99:
             count += 1
         else:
+            place_value = []
             while i != 0:
                 place_value.append(i%10)
-                i //= 10
+                i = i//10
             if place_value[0]-place_value[1] == place_value[1]-place_value[2]:
                 count += 1
     
