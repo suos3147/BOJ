@@ -11,14 +11,9 @@ if __name__ == "__main__":
             break
 
     for i in range(1, user_input+1):
-        if i <= 99:
+        if (i%10)-(i//10%10) == (i//10%10)-(i//10//10):
             count += 1
-        else:
-            place_value = []
-            while i != 0:
-                place_value.append(i%10)
-                i = i//10
-            if place_value[0]-place_value[1] == place_value[1]-place_value[2]:
-                count += 1
+        elif i < 100:
+            count += 1
     
     print(count)
