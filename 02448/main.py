@@ -2,6 +2,12 @@
 
 import sys
 
+def print_star(n):
+    for i in range(n):
+        for j in range(n*2-1):
+            sys.stdout.write("*")
+        print()
+
 if __name__ == "__main__":
     while 1:
         user_input = int(sys.stdin.readline())
@@ -11,4 +17,4 @@ if __name__ == "__main__":
         if user_input == 3*2**i:
             break
         
-    print(user_input)
+    print_star(user_input)
