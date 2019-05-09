@@ -5,6 +5,7 @@ import sys
 def print_star(n):
     for i in range(n):
         for j in range(n*2-1):
+            if
             sys.stdout.write("*")
         print()
 
