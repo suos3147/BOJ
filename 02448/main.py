@@ -3,11 +3,9 @@
 import sys
 
 def print_star(n):
+    star = ["  *   "," * *  ","***** "]
     for i in range(n):
-        for j in range(n*2-1):
-            if
-            sys.stdout.write("*")
-        print()
+        print(star[i%3])
 
 if __name__ == "__main__":
     while 1:
