@@ -4,9 +4,9 @@ import sys
 
 def print_star(n):
     star = ["  *   "," * *  ","***** "]
-    for i in range(n):
-        for j in range(i):
-            sys.stdout.write(star[i])
+    for i in range(0, n):
+        for j in range(n//3):
+            sys.stdout.write(star[i%3])
         print()
 
 if __name__ == "__main__":
