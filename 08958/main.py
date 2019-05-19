@@ -6,3 +6,4 @@ if __name__ == "__main__":
     while num != 0:
         user_input = input()
         
+        
