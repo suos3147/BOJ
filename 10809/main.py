@@ -6,9 +6,10 @@ if __name__ == "__main__":
 
     alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-    for i in range(len(user_input)):
-        for j in range 26:
-            if user_input[i] == alphabet[j]:
-                alphabet[j] = user_input.index()
-            else:
-                alphabet[j] = -1             
+    if user_input[0] == alphabet[0]:
+        alphabet[0] = user_input.index(alphabet[0])
+    else:
+        alphabet[0] = -1
+
+    print(alphabet)
+    
