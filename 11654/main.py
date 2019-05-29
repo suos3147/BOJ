@@ -10,7 +10,7 @@ if __name__ == "__main__":
             elif user_input >= 65 and user_input <= 90:
                 break
             elif user_input >= 97 and user_input <=122:
-               break
+                break
 
         except TypeError:
             continue
