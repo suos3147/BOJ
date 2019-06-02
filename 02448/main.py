@@ -18,4 +18,4 @@ if __name__ == "__main__":
         if user_input == 3*2**i:
             break
         
-    print_star(user_input)
+    #미완료
