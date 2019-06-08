@@ -1,43 +1,36 @@
 # 문제출처: https://www.acmicpc.net/problem/10828
 
+def enter_count():
+    try:
+        count = int(input())
+    except ValueError:
+        return enter_count()
+
+    if count >= 1 and count <=10000:
+        return count
+    else:
+        return enter_count()
+
+def enter_command():
+    try:
+        command = input()
+        return command
+    except ValueError:
+        return enter_command()
+
+class Stack:
+    def setdata(self, count, command, stack):
+        self.count = count
+        self.command = command
+        self.stack = stack
+
+    def push(self):
+        if self.command.find(" ",5) != -1:
+            command, num = self.command.split()
+            stack.append(num)
+        elif self.command == 'pop':
+            
+
 if __name__ == "__main__":
-    stack = []
-    
-    while True:
-        try:
-            command_line = int(input())
-            if command_line >= 1 and command_line <= 10000:
-                break
-        except ValueError:
-            continue
-    
-    while command_line != 0:
-        command = input().split()
-
-        if command[0] == 'push':
-            stack.append(command[1])
-
-        elif command[0] == 'pop':
-            if len(stack) == 0:
-                print(-1)
-            else:
-                print(stack[len(stack)-1])
-                del stack[len(stack)-1]
-
-        elif command[0] == 'size':
-            print(len(stack))
-
-        elif command[0] == 'empty':
-            if len(stack) == 0:
-                print(1)
-            else:
-                print(0)
-
-        elif command[0] == 'top':
-            print(stack[len(stack)-1])
-
-        else:
-            continue
-
-        command = []
-        command_line = command_line-1
+    s = stack
+    stack.setdata(enter_count, enter_command)
