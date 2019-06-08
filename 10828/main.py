@@ -27,9 +27,8 @@ class Stack:
     def push(self):
         if self.command.find(" ",5) != -1:
             command, num = self.command.split()
-            stack.append(num)
-        elif self.command == 'pop':
-            
+            self.stack.append(num)
+        
 
 if __name__ == "__main__":
     s = stack
