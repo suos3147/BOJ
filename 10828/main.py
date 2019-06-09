@@ -33,3 +33,4 @@ class Stack:
 if __name__ == "__main__":
     s = Stack
     s.setdata(enter_count, enter_command)
+    
