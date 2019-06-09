@@ -28,8 +28,8 @@ class Stack:
         if self.command.find(" ",5) != -1:
             command, num = self.command.split()
             self.stack.append(num)
-        
+    
 
 if __name__ == "__main__":
-    s = stack
-    stack.setdata(enter_count, enter_command)
+    s = Stack
+    s.setdata(enter_count, enter_command)
