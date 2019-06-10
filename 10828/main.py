@@ -41,9 +41,9 @@ def size(stack):
 
 def empty(stack):
     if len(stack) == 0:
-        print(0)
-    else:
         print(1)
+    else:
+        print(0)
 
 def top(stack):
     if len(stack) == 0:
@@ -70,5 +70,4 @@ if __name__ == "__main__":
             if push(s, cmd) == -1:
                 continue
 
-        print(s)
         cnt -= 1
