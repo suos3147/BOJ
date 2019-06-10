@@ -18,19 +18,57 @@ def enter_command():
     except ValueError:
         return enter_command()
 
-class Stack:
-    def setdata(self, count, command, stack):
-        self.count = count
-        self.command = command
-        self.stack = stack
 
-    def push(self):
-        if self.command.find(" ",5) != -1:
-            command, num = self.command.split()
-            self.stack.append(num)
+def push(stack, input_command):
+    try:
+        command, num = input_command.split()
+        if command == 'push':
+            stack.append(num)
+        else:
+            return -1
+    except ValueError:
+        return -1
+
+def pop(stack):
+    if len(stack) == 0:
+        print(-1)
+    else:
+        print(stack[-1])
+        stack.remove(stack[-1])
+
+def size(stack):
+    print(len(stack))
+
+def empty(stack):
+    if len(stack) == 0:
+        print(0)
+    else:
+        print(1)
+
+def top(stack):
+    if len(stack) == 0:
+        print(-1)
+    else:
+        print(stack[-1])
     
-
 if __name__ == "__main__":
-    s = Stack
-    s.setdata(enter_count, enter_command)
-    
+    s = []
+    cnt = enter_count()
+
+    while cnt != 0:
+        cmd = enter_command()
+
+        if cmd == 'pop':
+            pop(s)
+        elif cmd == 'size':
+            size(s)
+        elif cmd == 'empty':
+            empty(s)
+        elif cmd == 'top':
+            top(s)
+        else:
+            if push(s, cmd) == -1:
+                continue
+
+        print(s)
+        cnt -= 1
