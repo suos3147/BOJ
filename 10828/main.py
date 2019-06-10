@@ -20,21 +20,17 @@ def enter_command():
 
 
 def push(stack, input_command):
-    try:
-        command, num = input_command.split()
-        if command == 'push':
-            stack.append(num)
-        else:
-            return -1
-    except ValueError:
+    command, num = input_command.split()
+    if command == 'push':
+        return num
+    else:
         return -1
 
 def pop(stack):
     if len(stack) == 0:
         print(-1)
     else:
-        print(stack[-1])
-        stack.remove(stack[-1])
+        print(stack.pop())
 
 def size(stack):
     print(len(stack))
@@ -67,7 +63,10 @@ if __name__ == "__main__":
         elif cmd == 'top':
             top(s)
         else:
-            if push(s, cmd) == -1:
+            num = push(s, cmd)
+            if num == -1:
                 continue
+            else:
+                s.append(num)
 
         cnt -= 1
