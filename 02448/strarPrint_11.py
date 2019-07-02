@@ -18,4 +18,4 @@ if __name__ == "__main__":
         if user_input == 3*2**i:
             break
         
-    #미완료
+    #미완료 
