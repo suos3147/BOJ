@@ -2,4 +2,6 @@
 
 if __name__ == "__main__":
     NUMBER = int(input())
-    
+
+    while NUMBER != 0:
+        ps = input()
