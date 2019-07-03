@@ -18,7 +18,6 @@ def enter_command():
     except ValueError:
         return enter_command()
 
-
 def push(stack, input_command):
     command, num = input_command.split()
     if command == 'push':
