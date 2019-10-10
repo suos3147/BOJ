@@ -1,3 +1,4 @@
+"""
 def fibonacci(n):
     if n == 0:
         return 0
@@ -5,15 +6,19 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n-1)+fibonacci(n-2)
+"""
 
+result = [
+    [1, 0],  # fibonacci(n) 0 출력 개수
+    [0, 1]  # fibonacci(n) 1 출력 개수
+]
+
+for n in range(2, 41):
+    result[0].append(result[0][n-1]+result[0][n-2])
+    result[1].append(result[1][n-1]+result[1][n-2])
 
 T = int(input())  # 테스트 케이스 개수
-result = [0, 0]
 
-for i in range(T):
+for _ in range(T):
     n = int(input())
-    if fibonacci(n) == 0:
-        result[0] += 1
-    elif fibonacci(n) == 1:
-        result[1] += 1
-    print("%d %d" % (result[0], result[1]))
+    print('%d %d' % (result[0][n], result[1][n]))
